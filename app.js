@@ -96,4 +96,13 @@ window.onclick = function(event) {
   }
 }
 
+var closeButton = document.querySelector('.close');
+var modalVideo = document.getElementById('modalVideo');
+
+// Agrega un event listener al botón de cierre
+closeButton.addEventListener('click', function() {
+  // Pausa el video cuando se cierra la modal
+  modalVideo.pause();
+});
+
 
