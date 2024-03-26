@@ -55,21 +55,37 @@ cambiarFondo();
 // Llama a la función cada 5 segundos para cambiar el fondo con transición
 setInterval(cambiarFondo, 5000); // Intervalo de cambio de fondo en milisegundos (5000ms = 5s)
 
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.getElementsByClassName("mySlides");
+function showSlides(className) {
+  let slides = document.querySelectorAll("." + className + " .mySlides");
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  slideIndex[className]++;
+  if (slideIndex[className] >= slides.length) {
+    slideIndex[className] = 0;
+  }
+  slides[slideIndex[className]].style.display = "block";
 }
+
+// Iniciar slideshow para cada cuadro
+var slideIndex = {
+  "slideshow-container-campamento-jovenes": 0,
+  "slideshow-container-otros-eventos": 0
+};
+
+showSlides("slideshow-container-campamento-jovenes");
+showSlides("slideshow-container-otros-eventos");
+
+// Cambiar diapositivas cada 5 segundos para cada cuadro
+setInterval(function() {
+  showSlides("slideshow-container-campamento-jovenes");
+}, 5000);
+
+setInterval(function() {
+  showSlides("slideshow-container-otros-eventos");
+}, 5000);
 var modal = document.getElementById("myModal");
-var eventos = document.querySelector(".eventos");
+var eventos = document.querySelector(".slideshow-container-campamento-jovenes");
 var span = document.getElementsByClassName("close")[0];
 var body = document.body;
 

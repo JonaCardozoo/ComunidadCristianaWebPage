@@ -3,17 +3,21 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #FEFFFF;
+  background-color:white;
   font-family: 'Raleway', sans-serif;
+  
 }
 
 *::selection{
   color: #299FFF;
+  
 }
 
-body.modal-open {
-  overflow: hidden;
+.map-container {
+  display: flex;
+  justify-content: center;
 }
+
 
 #verse {
   transition: opacity 0.5s ease;
@@ -23,6 +27,7 @@ body.modal-open {
 .fade-out {
   opacity: 0;
 }
+
 
 /*MENU*/
 .nav{
@@ -185,6 +190,11 @@ label{
   
 }
 
+.text-adress{
+  display: flex;
+  justify-content: center;
+}
+
 .slideshow-container {
   position: relative;
   max-width: 100%;
@@ -206,14 +216,6 @@ label{
   to {opacity: 1}
 }
 
-
-.grand-title {
-  transition: transform 0.3s ease-in-out;
-}
-
-.grand-title:hover {
-  transform: scale(1.1);
-}
 .text{
   display: flex;
   justify-content: center;
@@ -240,7 +242,7 @@ label{
 
 .inner-text:hover{
   cursor: pointer;
-  box-shadow: -1px 6.5px 20px rgba(1, 66, 131, 0.75);
+  box-shadow: -1px 6.5px 20px rgba(142, 198, 255, 0.75);
   
 }
 
