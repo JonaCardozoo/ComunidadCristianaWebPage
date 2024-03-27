@@ -121,4 +121,24 @@ closeButton.addEventListener('click', function() {
   modalVideo.pause();
 });
 
+function cambiarFondo() {
+  // Selecciona la siguiente imagen de fondo del array
+  backgroundIndex = (backgroundIndex + 1) % backgrounds.length;
+  var nextBackground = backgrounds[backgroundIndex];
+  
+  // Cambia el fondo del elemento photo
+  photoElement.style.backgroundImage = 'url(' + nextBackground + ')';
+}
+
+// Llama a la función inicialmente para mostrar una imagen al cargar la página
+cambiarFondo();
+
+// Llama a la función cada 5 segundos para cambiar el fondo con transición
+setInterval(cambiarFondo, 5000); // Intervalo de cambio de fondo en milisegundos (5000ms = 5s)
+
+
+
+
+
+
 

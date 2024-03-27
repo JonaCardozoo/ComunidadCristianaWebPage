@@ -6,6 +6,8 @@
   <title>Comunidad Cristiana Paraná</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
 </head>
 <body>
 <section class="photo" id="inicio">
@@ -16,13 +18,15 @@
     <div class="menu">
       
       <a href="#inicio">inicio</a>
-      <a href="#servicio">Horarios</a>
-      <a href="#trabajo">Sobre nosotros</a>
-      <a href="#contacto">contacto</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#sobreNosotros">Sobre nosotros</a>
+      <a href="#ubicacion">Ubicacion</a>
+      <a href="#Eventos">Eventos</a>
+      
     </div>
   </div>
   
-  <div class="photo-text">
+  <div class="photo-text" id="inicio">
     <h4 class="skype">Comunidad Cristiana | Paraná</h4>
     <p id="verse" data-ix="subtitle-hero-up"></p>
     
@@ -34,7 +38,7 @@
 
 <section class="content">
   
-  <div class="grand-title" id="servicio">
+  <div class="grand-title" id="horarios">
     <h4 data-ix="slowfade-scroll-bigs">HORARIOS</h4>
     
   </div>
@@ -63,7 +67,7 @@
       </div>
     </div>
   </div>
-  <section class="SobreNosotros" id="trabajo">
+  <section class="SobreNosotros" id="sobreNosotros">
     <div class="grand-title" id="servicio"><h4 data-ix="slowfade-scroll-bigs">SOBRE NOSOTROS</h4></div>
     
     <p> Iglesia Comunidad Cristiana de Paraná, nació hace más de 25 años establecida en la ciudad, con la visión de renovación y restauración caminamos todos estos años.
@@ -93,41 +97,43 @@
           
         </div>
         
-        <div class="map-container">
+        <section class="map-container" id="ubicacion">
           
           <div class="map-border">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d848.0426001744124!2d-60.48449786612177!3d-31.765838040368884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44f7ae54fc861%3A0x3d8c3f0f8d384345!2sIglesia%20Comunidad%20Cristiana%20Paran%C3%A1!5e0!3m2!1ses!2sar!4v1711483959480!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
-          </div>
+          </section>
           
       </div>
-      <section class="eventos">
-        <div class="grand-title" id="servicio">
+      <section class="eventos" id="Eventos">
+        <div class="grand-title" id="eventos">
           <h4 data-ix="slowfade-scroll-bigs">EVENTOS</h4>
         </div>
        
-        <div class="inner-text">
-          <div class="slideshow-container-campamento-jovenes">
-            <img class="mySlides" src="foto-campa2.jpg" alt="Descripción de la imagen 1" height="200px">
-            <img class="mySlides" src="foto-campa3.jpg" alt="Descripción de la imagen 2" height="200px">
+        <div class="contenedor">
+          <div class="inner-text">
+            <div class="slideshow-container-campamento-jovenes">
+              <img class="mySlides" src="foto-campa2.jpg" alt="Descripción de la imagen 1" height="200px">
+              <img class="mySlides" src="foto-campa3.jpg" alt="Descripción de la imagen 2" height="200px">
+            </div>
+            <h3 data-ix="slowfade-scroll-bigs">Campamento de Jovenes</h3>
+            <i class="ic ion-spoon"></i>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">del 4/3 al 7/3</h5>
+              <h5 data-ix="slowfade-scroll-bigs">Camping los paraisos</h5>
+            </div>
           </div>
-          <h3 data-ix="slowfade-scroll-bigs">Campamento de Jovenes</h3>
-          <i class="ic ion-spoon"></i>
-          <div class="text-box">
-            <h5 data-ix="slowfade-scroll-bigs">del 4/3 al 7/3</h5>
-            <h5 data-ix="slowfade-scroll-bigs">Camping los paraisos</h5>
-          </div>
-        </div>
         
-        <div class="inner-text">
-          <div class="slideshow-container-otros-eventos">
-            <img class="mySlides" src="WhatsApp Image 2024-03-26 at 18.03.20.jpeg" alt="Descripción de la imagen 3" height="200px">
-          </div>
-          <h3 data-ix="slowfade-scroll-bigs">Reunion de Oracion</h3>
-          <i class="ic ion-spoon"></i>
-          <div class="text-box">
-            <h5 data-ix="slowfade-scroll-bigs">29/03</h5>
-            <h5 data-ix="slowfade-scroll-bigs">Las camelias 2843</h5>
+          <div class="inner-text">
+            <div class="slideshow-container-otros-eventos">
+              <img class="mySlides" src="WhatsApp Image 2024-03-26 at 18.03.20.jpeg" alt="Descripción de la imagen 3" height="200px">
+            </div>
+            <h3 data-ix="slowfade-scroll-bigs">Reunion de Oracion</h3>
+            <i class="ic ion-spoon"></i>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">29/03</h5>
+              <h5 data-ix="slowfade-scroll-bigs">Las camelias 2843</h5>
+            </div>
           </div>
         </div>
       </section>
@@ -164,6 +170,85 @@
    
   </div>
 </div>
+
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="cta-text">
+                          <h4>Ubicacion</h4>
+                          <span>Las camelias 2843, Parana Entre Rios</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Telefono</h4>
+                          <span>3435095743</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="far fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail</h4>
+                          <span>comunidadcristiana@gmail.com  *ejemplo*</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50">
+                  <div class="footer-widget">
+                      
+                      
+                      <div class="footer-social-icon">
+                          <span>Seguinos en nuestras redes!</span>
+                          <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="copyright-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                  
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                      <ul>
+                          <li><a href="#inicio">Inicio</a></li>
+                          <li><a href="#horarios">Horarios</a></li>
+                          <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+                          <li><a href="#eventos">Eventos</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
 
 </body>
 </html>
