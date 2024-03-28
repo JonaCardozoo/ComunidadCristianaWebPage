@@ -316,6 +316,14 @@ label{
   letter-spacing: 1.2px;
 }
 
+.Pastores-Diaconos h4{
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  color: #354757;
+  letter-spacing: 1.2px;
+}
+
 
 
 .SobreNosotros h4:after{
@@ -423,6 +431,7 @@ label{
 .container *{
   box-sizing: border-box;
 }
+
 @media screen and (max-width: 950px){
   .photo p{width: 90%;}
   .grand-title{width: 90%;}
