@@ -6,6 +6,7 @@ body{
   padding: 0;
   background-color:white;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
   
 }
 
@@ -37,15 +38,14 @@ body{
   line-height: 70px;
   position: relative;
   z-index: 999;
+  
 }
 
-.menu{
+.menu {
   margin: 0 50px 0 0;
 }
 
-
-
-.menu a{
+.menu a {
   clear: right;
   text-decoration: none;
   color: #FEFFFF;
@@ -79,7 +79,7 @@ label{
   background-color: #FEFFFF;
 }
 
-.photo{
+.photo {
   width: 100%;
   height: 700px;
   position: relative;
@@ -87,6 +87,9 @@ label{
   background-size: cover;
   overflow: hidden;
   transition: 0.5s;
+  margin: 0;
+  padding: 0;
+
 }
 
 .photo-text{
@@ -332,8 +335,8 @@ label{
 }
 
 .SobreNosotros p{
- text-align: center;
-
+  text-align: center;
+  font-size: 20px;
 }
 .eventos h4{
   text-align: center;
@@ -679,6 +682,108 @@ color: #878787;
 }
 
 
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.custom-select:hover {
+  background-color:#46a5db;
+  transition: all 0.3s;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #46a5db;
+  height: 40px;
+  color: aliceblue;
+}
+
+.selected-option img {
+  width: 35px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto;
+  margin: 10px;
+
+}
+
+.options {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 98%;
+  border: 1px solid #0dc9cf;
+  z-index: 1;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  cursor: pointer;
+}
+
+.option img {
+  width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto;
+  margin-right: 10px;
+}
+
+.option:hover {
+  background-color:#46a5db;
+  transition: all 0.4s;
+}
+
+/* CSS para tamaños de pantalla entre 768px y 1350px */
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .option img {
+      width: 25px; /* Ajusta el tamaño de la imagen para el rango de pantalla específico */
+  }
+}
+
+/* CSS para tamaños de pantalla mayores a 1350px */
+@media screen and (min-width: 1350px) {
+  .option img {
+      width: 30px; /* Ajusta el tamaño de la imagen para pantallas más grandes */
+  }
+
+  
+}
+
+
+
+@media screen and (min-width: 1350px) {
+  .option img {
+      width: 30px; /* Ajusta el tamaño de la imagen para pantallas más grandes */
+  }
+}
+
+/* CSS para tamaños de pantalla entre 768px y 1344px */
+@media screen and (min-width: 768px) and (max-width: 1346px) {
+  .option img {
+      width: 20px; /* Ajusta el tamaño de la imagen para el rango de pantalla específico */
+  }
+}
+
+
+
+@media screen and (max-width: 1570px ) {
+  .selected-option {
+      display: block;
+      width: 100%;
+      padding: 5px 20px; /* Puedes ajustar este valor según sea necesario */
+      border-radius: 0;
+  }
+  .options {
+    width: 133%;
+  }
+}
+
 /* Media query para dispositivos móviles */
 @media (max-width: 600px) {
   .inner-text {
@@ -692,9 +797,6 @@ color: #878787;
   }
 }
 
-
-
-
 @media screen and (max-width: 950px){
   .photo p{width: 90%;}
   .grand-title{width: 90%;}
@@ -702,34 +804,132 @@ color: #878787;
   .boxy:nth-child(1),.boxy:nth-child(2){width: 90%;}/*GENERA PROBLEMA*/
   .boxy:nth-child(1){padding: 10px;}
   #slider{margin-left: -55px;}
+  .photo h4{margin-left: 20%;}
+  
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1281px) {
+  
+  .custom-select{
+    display:contents;
+    
+  }
 
-  label{
+  label {
     display: block;
     cursor: pointer;
+    
   }
-  .menu{
+  .menu {
     text-align: center;
     width: 100%;
     display: none;
+    margin-top: 1px;
+    
   }
-  .menu a{
-    display: block;
+  .menu a {
+    display: block; /* Cambiado a block */
+    text-align: center;
     border-bottom: 1px solid #EAEAEB;
     margin: 0;
     color: #6D85A8;
+    width: 100%; /* Añadido ancho al 100% */
+    
   }
+
+  #toggle:checked + .menu {
+    display: block;
+    background-color: #FEFFFF;
+    
+  }
+  .selected-option {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    height: 40px;
+    color: aliceblue;
+  }
+
   
-  #toggle:checked + .menu{display: block; background-color: #FEFFFF;}
+}
+
+@media only screen and (max-width: 600px) {
+  
+  
+  .menu a {
+    display: block;
+    width: 100%;
+    
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .custom-select {
+    width: 100%; /* Hace que el select ocupe todo el ancho disponible */
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+  }
+
+  .selected-option img{
+    margin: 20px;
+  }
+  .option {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+ body{
+  padding: 0;
+  margin: -4%;
+ }
+}
+
+/* Estilos para dispositivos de escritorio */
+@media screen and (min-width: 1100px) {
+  .custom-select {
+    width: 8%; /* Devuelve el ancho a su valor predeterminado */
+    margin-bottom: 0; /* Reinicia el margen inferior */
+  }
+
+ 
+}
+
+@media screen and (max-width: 1100px) {
+  .selected-option {
+    
+    color: #000;
+  }
+
+ 
+}
+
+
+
+@media screen and (max-width: 281px) {
+  body{
+    width: 130%;
+    padding: 2px;
+  }
+
+  .SobreNosotros p{
+    font-size: 120%;
+    padding: 20px;
+  }
+
+ 
 }
 
 @media screen and (max-width: 500px){
   #slider{margin-left: -55px;}
   .photo-text h4{font-size: 45px;}
   .inner-text{width: 80%;}
-
+  
 }
+
+
+
 
 @keyframes slider{
   0%{left: 0; opacity: 0;}
@@ -742,3 +942,5 @@ color: #878787;
   95%{left: -400%; opacity: .6;}
   100%{left: -400%; opacity: 1;}
 }
+
+

@@ -47,6 +47,7 @@ function cambiarFondo() {
   
   // Cambia el fondo del elemento photo
   photoElement.style.backgroundImage = 'url(' + nextBackground + ')';
+  
 }
 
 // Llama a la función inicialmente para mostrar una imagen al cargar la página
@@ -137,8 +138,69 @@ cambiarFondo();
 setInterval(cambiarFondo, 5000); // Intervalo de cambio de fondo en milisegundos (5000ms = 5s)
 
 
+// Idiomas
+function mostrarOpciones() {
+  var options = document.querySelector('.options');
+  if (options.style.display === 'none' || options.style.display === '') {
+    options.style.display = 'block';
+  } else {
+    options.style.display = 'none';
+  }
+}
 
+// Idiomas
+function cambiarIdioma(idiomaSeleccionado) {
+  var textosEspanol = document.querySelectorAll(".texto-espanol");
+  var textosIngles = document.querySelectorAll(".texto-ingles");
+  
+  if (idiomaSeleccionado === "es") {
+      textosEspanol.forEach(function(texto) {
+          texto.style.display = ""; // Mostrar texto en español
+      });
+      textosIngles.forEach(function(texto) {
+          texto.style.display = "none"; // Ocultar texto en inglés
+      });
+  } else {
+      textosEspanol.forEach(function(texto) {
+          texto.style.display = "none"; // Ocultar texto en español
+      });
+      textosIngles.forEach(function(texto) {
+          texto.style.display = ""; // Mostrar texto en inglés
+      });
+  }
 
+  // Mostrar el menú después de cambiar el idioma
+  var menu = document.querySelector('.menu');
+  if (idiomaSeleccionado === "es") {
+      menu.style.textAlign = "right"; // Alinear el menú a la izquierda cuando está en inglés
+  } else {
+      menu.style.textAlign = "right"; // Alinear el menú a la derecha cuando está en español
+  }
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+  var select = document.getElementById('selectorIdioma');
+  var selectedOption = select.querySelector('.selected-option');
+  var options = select.querySelectorAll('.option');
 
+  selectedOption.addEventListener('click', function() {
+      select.querySelector('.options').style.display = 'block';
+  });
 
+  options.forEach(function(option) {
+      option.addEventListener('click', function() {
+        var opciones = document.getElementById('custom-select');
+          var value = this.getAttribute('data-value');
+          var text = this.textContent;
+          var icon = this.querySelector('img').cloneNode(true);
+          selectedOption.innerHTML = '';
+          selectedOption.appendChild(icon);
+          selectedOption.innerHTML += text;
+          select.querySelector('.options').style.display = 'none';
+          // Aquí puedes agregar la lógica para manejar la selección
+          cambiarIdioma(value); // Ejemplo de llamada a la función cambiarIdioma
+          opciones.style.display = 'none';
+
+      });
+  });
+});

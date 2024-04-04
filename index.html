@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +11,44 @@
 </head>
 <body>
 <section class="photo" id="inicio">
-  
   <div class="nav" id="sticker">
     <label for="toggle">&#9776;</label>
     <input type="checkbox" id="toggle" />
     <div class="menu">
       
-      <a href="#inicio">inicio</a>
-      <a href="#horarios">Horarios</a>
-      <a href="#sobreNosotros">Sobre nosotros</a>
-      <a href="#pastores">Pastores/Diaconos</a>
-      <a href="#ubicacion">Ubicacion</a>
-      <a href="#Eventos">Eventos</a>
-      
+      <a href="#inicio" class="texto-espanol" >Inicio</a>
+      <a href="#inicio" class="texto-ingles" style="display: none;">Home</a>
+      <a href="#horarios" class="texto-espanol">Horarios</a>
+      <a href="#horarios" class="texto-ingles" style="display: none;">Schedule</a>
+      <a href="#sobreNosotros" class="texto-espanol">Sobre nosotros</a>
+      <a href="#sobreNosotros" class="texto-ingles" style="display: none;">About Us</a>
+      <a href="#pastores" class="texto-espanol">Pastores/Diaconos</a>
+      <a href="#pastores" class="texto-ingles" style="display: none;">Pastors/Deacons</a>
+      <a href="#ubicacion" class="texto-espanol">Ubicación</a>
+      <a href="#ubicacion" class="texto-ingles" style="display: none;">Location</a>
+      <a href="#Eventos" class="texto-espanol">Eventos</a>
+      <a href="#Eventos" class="texto-ingles" style="display: none;">Events</a>
+
+      <div class="custom-select" id="selectorIdioma">
+        <div class="selected-option">
+            <img src="Flag_of_Argentina.svg.webp" alt="Argentina">
+            <span>Español</span>
+        </div>
+        <div class="options">
+            <div class="option" data-value="es" onclick="cambiarIdioma('es')">
+                <img src="Flag_of_Argentina.svg.webp" alt="Argentina">
+                <span>Español</span>
+            </div>
+            <div class="option" data-value="en" onclick="cambiarIdioma('en')">
+                <img src="vector-bandera-estados-unidos_1001513-9.jpg" alt="Estados Unidos">
+                <span>Inglés</span>
+            </div>
+        </div>
+      </div>
+
+    
     </div>
-  </div>
-  
+</div>
   <div class="photo-text" id="inicio">
     <h4 class="skype">Comunidad Cristiana | Paraná</h4>
     <p id="verse" data-ix="subtitle-hero-up"></p>
@@ -36,60 +58,65 @@
   
 </section>
 
-
 <section class="content">
   
   <div class="grand-title" id="horarios">
-    <h4 data-ix="slowfade-scroll-bigs">HORARIOS</h4>
+    <h4 class="texto-espanol" data-ix="slowfade-scroll-bigs">HORARIOS</h4>
+    <h4 style="display:none;" class="texto-ingles" data-ix="slowfade-scroll-bigs" >SCHEDULES</h4>
     
   </div>
   <div class="text">
     <div class="inner-text">
-      <h3 data-ix="slowfade-scroll-bigs">Reunion General</h3>
+      <h3 class="texto-espanol" data-ix="slowfade-scroll-bigs">Reunion General</h3>
+      <h3 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">General meeting</h3>
       <i class="ic ion-spoon"></i>
       <div class="text-box">
-        <h5 data-ix="slowfade-scroll-bigs">Todos los domingos a las 10:00 hs</h5>
-        
+        <h5 class="texto-espanol" data-ix="slowfade-scroll-bigs">Todos los domingos a las 10:00 hs</h5>
+        <h5 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Every Sunday at 10:00 a.m.</h5>
       </div>
     </div>
     
     <div class="inner-text">
-      <h3 data-ix="slowfade-scroll-bigs">Reunion de jovenes</h3>
+      <h3 class="texto-espanol" data-ix="slowfade-scroll-bigs">Reunion de jovenes</h3>
+      <h3 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Young people meeting</h3>
       <i class="ic ion-knife"></i>
       <div class="text-box">
-        <h5 data-ix="slowfade-scroll-bigs">Todos los sabados a las 19:00</h5>
+        <h5 class="texto-espanol" data-ix="slowfade-scroll-bigs">Todos los sabados a las 19:00</h5>
+        <h5 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Every Saturday at 7:00 p.m.</h5>
       </div>
     </div>
     <div class="inner-text">
-      <h3 data-ix="slowfade-scroll-bigs">Reunion de oración</h3>
+      <h3 class="texto-espanol" data-ix="slowfade-scroll-bigs">Reunion de oración</h3>
+      <h3 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">prayer meeting</h3>
       <i class="ic ion-spoon"></i>
       <div class="text-box">
-        <h5 data-ix="slowfade-scroll-bigs">Todos los jueves 20:00</h5>
+        <h5 class="texto-espanol" data-ix="slowfade-scroll-bigs">Todos los jueves 20:00</h5>
+        <h5 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Every Thursday 8:00 p.m.</h5>
       </div>
     </div>
   </div>
   <section class="SobreNosotros" id="sobreNosotros">
-    <div class="grand-title" id="servicio"><h4 data-ix="slowfade-scroll-bigs">SOBRE NOSOTROS</h4></div>
+    <div class="grand-title" id="servicio"><h4 class="texto-espanol" data-ix="slowfade-scroll-bigs">SOBRE NOSOTROS</h4> <h4 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">ABOUT US</h4></div>
     
-    <p> Iglesia Comunidad Cristiana de Paraná, nació hace más de 25 años establecida en la ciudad, con la visión de renovación y restauración caminamos todos estos años.
-      <br>
-      <br>
-      <b>Renovación: </b> Porque produjo una nueva frescura en la comunión y las expresiones de amor entre los santos, una mayor libertad y profundidad en el culto a Dios, la vivencia de un cristianismo práctico, un énfasis gozoso en los dones y las manifestaciones del Espíritu.
-      <br>
-      <br>
-      <b>Restauración: </b> La Iglesia Primitiva fue un modelo a observar y a imitar. En ese contexto, el Reino de Dios, o sea el gobierno de Dios en las vidas de las personas y de la congregación fue el eje central de esta restauración de la verdad.
-      También fue un punto vital el redescubrimiento del Propósito Eterno de Dios
-      <br>
-      <br>
-      «Según nos escogió en él antes de la fundación del mundo, para que fuésemos santos y sin mancha delante de él, en amor habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo, según el puro afecto de su voluntad. <br> Efesios 1:4-23»
-        <br>    
-        <br>                                                                                                    
-      El Propósito Eterno de Dios: «Una familia de muchos hijos semejantes a Jesús <br>Efesios 1:4-5»
-
-      </p>
-      </section>
+    <div>
+      <p class="texto-espanol">Iglesia Comunidad Cristiana de Paraná, nació hace más de 25 años establecida en la ciudad, con la visión de renovación y restauración caminamos todos estos años.</p>
+      <p class="texto-espanol">Renovación: Porque produjo una nueva frescura en la comunión y las expresiones de amor entre los santos, una mayor libertad y profundidad en el culto a Dios, la vivencia de un cristianismo práctico, un énfasis gozoso en los dones y las manifestaciones del Espíritu.</p>
+      <p class="texto-espanol">Restauración: La Iglesia Primitiva fue un modelo a observar y a imitar. En ese contexto, el Reino de Dios, o sea el gobierno de Dios en las vidas de las personas y de la congregación fue el eje central de esta restauración de la verdad. También fue un punto vital el redescubrimiento del Propósito Eterno de Dios</p>
+      <p class="texto-espanol">«Según nos escogió en él antes de la fundación del mundo, para que fuésemos santos y sin mancha delante de él, en amor habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo, según el puro afecto de su voluntad. <br> Efesios 1:4-23»</p>
+      <p class="texto-espanol">El Propósito Eterno de Dios: «Una familia de muchos hijos semejantes a Jesús <br>Efesios 1:4-5»</p>
+  
+      <p class="texto-ingles" style="display:none;">Comunidad Cristiana Church of Paraná, born more than 25 years ago established in the city, with the vision of renewal and restoration we have walked all these years.</p>
+      <p class="texto-ingles" style="display:none;">Renewal: Because it brought a new freshness in the communion and expressions of love among the saints, a greater freedom and depth in the worship of God, the experience of a practical Christianity, a joyful emphasis on the gifts and manifestations of the Spirit.</p>
+      <p class="texto-ingles" style="display:none;">Restoration: The Primitive Church was a model to observe and imitate. In that context, the Kingdom of God, or rather the government of God in the lives of people and the congregation was the central axis of this restoration of truth. It was also vital the rediscovery of God's Eternal Purpose</p>
+      <p class="texto-ingles" style="display:none;">"Just as He chose us in Him before the foundation of the world, that we should be holy and without blame before Him in love, having predestined us to adoption as sons by Jesus Christ to Himself, according to the good pleasure of His will. <br> Ephesians 1: 4-23"</p>
+      <p class="texto-ingles" style="display:none;">God's Eternal Purpose: "A family of many sons like Jesus <br> Ephesians 1: 4-5"</p>
+    </div>
+    
+  </section>
+  
       <section class="grand-title" id="ubicacion">
-        <h4 data-ix="slowfade-scroll-bigs">UBICACION</h4>
+        <h4 class="texto-espanol" data-ix="slowfade-scroll-bigs">UBICACION</h4>
+        <h4 class="texto-ingles" style="display:none;" data-ix="slowfade-scroll-bigs" style="display: none;">LOCATION</h4>
         
       </section>
         <div class="text-adress">
@@ -104,10 +131,9 @@
           </div>
           
       </div>
-
-
       <section class="Pastores-Diaconos" id="pastores">
-        <h4 data-ix="slowfade-scroll-bigs">Pastores|Diaconos</h4>
+        <h4 class="texto-espanol" data-ix="slowfade-scroll-bigs">Pastores|Diaconos</h4>
+        <h4 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Pastors|Deacons</h4>
         <div class="contenedor">
           <div class="card">
             <div class="imgBx">
@@ -138,7 +164,7 @@
             </div>
             <div class="content">
               <div class="contentBx">
-                <h3>Ariel Gomez <br /><span>Diacono</span></h3>
+                <h3>Ariel Gomez <br /><span class="texto-espanol">Diacono</span> <span class="texto-ingles" style="display: none;">Deacon</span></h3>
               </div>
             </div>
           </div>
@@ -154,7 +180,7 @@
             </div>
             <div class="content">
               <div class="contentBx">
-                <h3>Orlando Gabilan <br /><span>Diacono</span></h3>
+                <h3>Orlando Gabilan <br /><span class="texto-espanol">Diacono</span> <span class="texto-ingles" style="display: none;">Deacon</span></h3>
               </div>
             </div>
           </div>
@@ -163,7 +189,8 @@
       </section>
       <section class="eventos" id="Eventos">
         <div class="grand-title" id="eventos">
-          <h4 data-ix="slowfade-scroll-bigs">EVENTOS</h4>
+          <h4 class="texto-espanol" data-ix="slowfade-scroll-bigs">EVENTOS</h4>
+          <h4 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">EVENTS</h4>
         </div>
        
         <div class="contenedor">
@@ -172,10 +199,12 @@
               <img class="mySlides" src="foto-campa2.jpg" alt="Descripción de la imagen 1" height="200px">
               <img class="mySlides" src="foto-campa3.jpg" alt="Descripción de la imagen 2" height="200px">
             </div>
-            <h3 data-ix="slowfade-scroll-bigs">Campamento de Jovenes</h3>
+            <h3 class="texto-espanol" data-ix="slowfade-scroll-bigs">Campamento de Jovenes</h3>
+            <h3 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Youth Camp</h3>
             <i class="ic ion-spoon"></i>
             <div class="text-box">
-              <h5 data-ix="slowfade-scroll-bigs">del 4/3 al 7/3</h5>
+              <h5 class="texto-espanol" data-ix="slowfade-scroll-bigs">del 4/3 al 7/3</h5>
+              <h5 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">from 4/3 to 7/3</h5>
               <h5 data-ix="slowfade-scroll-bigs">Camping los paraisos</h5>
             </div>
           </div>
@@ -184,7 +213,10 @@
             <div class="slideshow-container-otros-eventos">
               <img class="mySlides" src="WhatsApp Image 2024-03-26 at 18.03.20.jpeg" alt="Descripción de la imagen 3" height="200px">
             </div>
-            <h3 data-ix="slowfade-scroll-bigs">Reunion de Oracion</h3>
+            <h3 class="texto-espanol" data-ix="slowfade-scroll-bigs">Reunion de Oracion</h3>
+            <h3 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;">Prayer Meeting</h3>
+            <h3 class="texto-espanol" data-ix="slowfade-scroll-bigs"><BR>-FINALIZADO-</BR></h3>
+            <h3 class="texto-ingles" data-ix="slowfade-scroll-bigs" style="display: none;"><BR>-FINALIZED-</BR></h3>
             <i class="ic ion-spoon"></i>
             <div class="text-box">
               <h5 data-ix="slowfade-scroll-bigs">29/03</h5>
@@ -197,14 +229,19 @@
       <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <h4>Te invitamos a una experiencia única donde la naturaleza y la espiritualidad se combinan para ofrecerte días inolvidables.
+          <h4 class="texto-espanol">Te invitamos a una experiencia única donde la naturaleza y la espiritualidad se combinan para ofrecerte días inolvidables.
       
             Ubicado en un entorno natural increíble, el campamento ofrece una variedad de actividades emocionantes como deportes al aire libre. Pero lo más importante son los momentos de adoración y comunidad, donde compartimos testimonios, estudiamos la palabra de Dios y fortalecemos nuestra fe juntos.
             
             El equipo de líderes está dedicado a crear un ambiente acogedor y seguro donde cada participante se sienta valorado y apoyado en su viaje espiritual. Las amistades que se forman aquí perduran mucho más allá de los días de campamento.</h4>
-          
+            <h4 class="texto-ingles" style="display: none;">We invite you to a unique experience where nature and spirituality combine to offer you unforgettable days.
+      
+              Located in an incredible natural environment, the camp offers a variety of exciting activities such as outdoor sports. But the most important thing are the moments of worship and community, where we share testimonies, study the word of God and strengthen our faith together.
+             
+              The leadership team is dedicated to creating a welcoming and safe environment where each participant feels valued and supported in their spiritual journey. The friendships formed here last far beyond the days of camp.</h4>
           <!-- Aquí está el iframe del video de YouTube -->
-          <h2>Video del ultimo retiro</h2>
+          <h2 class="texto-espanol">Video del ultimo retiro</h2>
+          <h2 class="texto-ingles" style="display: none;">Video of the last withdrawal</h2>
           <div class="video-container">
             
     <!-- Aquí está el reproductor de video HTML5 -->
@@ -235,7 +272,8 @@
                   <div class="single-cta">
                       <i class="fas fa-map-marker-alt"></i>
                       <div class="cta-text">
-                          <h4>Ubicacion</h4>
+                          <h4 class="texto-espanol">Ubicacion</h4>
+                          <h4 class="texto-ingles" style="display: none;">Location</h4>
                           <span>Las camelias 2843, Parana Entre Rios</span>
                       </div>
                   </div>
@@ -244,7 +282,8 @@
                   <div class="single-cta">
                       <i class="fas fa-phone"></i>
                       <div class="cta-text">
-                          <h4>Telefono</h4>
+                          <h4 class="texto-espanol">Telefono</h4>
+                          <h4 class="texto-ingles" style="display: none;">Phone</h4>
                           <span>3435095743</span>
                       </div>
                   </div>
@@ -254,7 +293,7 @@
                       <i class="far fa-envelope-open"></i>
                       <div class="cta-text">
                           <h4>Mail</h4>
-                          <span>comunidadcristiana@gmail.com  *ejemplo*</span>
+                          <span>comunidadcristiana8@gmail.com</span>
                       </div>
                   </div>
               </div>
@@ -264,23 +303,15 @@
           <div class="row">
               <div class="col-xl-4 col-lg-4 mb-50">
                   <div class="footer-widget">
-                      
-                      
                       <div class="footer-social-icon">
-                          <span>Seguinos en nuestras redes!</span>
+                          <span class="texto-espanol">Seguinos en nuestras redes!</span>
+                          <span class="texto-ingles" style="display: none;">Follow us on our networks!</span>
                           <div class="social-icons">
                             <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                            <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+                            <a Target="_blank"  href="https://www.instagram.com/ccparana/"><i class="fab fa-instagram instagram-bg" ></i></a>
                           </div>
-                          
                       </div>
                   </div>
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                  
-              </div>
-              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                  
               </div>
           </div>
       </div>
@@ -294,10 +325,19 @@
               <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                   <div class="footer-menu">
                       <ul>
-                          <li><a href="#inicio">Inicio</a></li>
-                          <li><a href="#horarios">Horarios</a></li>
-                          <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
-                          <li><a href="#eventos">Eventos</a></li>
+                          <li class="texto-espanol"><a href="#inicio">Inicio</a></li>
+                          <li class="texto-ingles" style="display: none;"><a href="#inicio">Home</a></li>
+                          <li class="texto-espanol"><a href="#horarios">Horarios</a></li>
+                          <li class="texto-ingles" style="display: none;"><a href="#horarios">Schedules</a></li>
+                          <li class="texto-espanol"><a href="#sobreNosotros">Sobre Nosotros</a></li>
+                          <li class="texto-ingles" style="display: none;"><a href="#sobreNosotros">About us</a></li>
+                          <li class="texto-espanol"><a href="#pastores">Pastores-Diaconos</a></li>
+                          <li class="texto-ingles" style="display: none;"><a href="#pastores">Pastors-Deacons</a></li>
+                          <li class="texto-espanol"><a href="#ubicacion">Ubicacion</a></li>
+                          <li class="texto-ingles" style="display: none;"><a href="#ubicacion">Location</a></li>
+                          <li class="texto-espanol"><a href="#eventos">Eventos</a></li>
+                          <li class="texto-ingles" style="display: none;"><a href="#eventos">Events</a></li>
+                          
                       </ul>
                   </div>
               </div>
